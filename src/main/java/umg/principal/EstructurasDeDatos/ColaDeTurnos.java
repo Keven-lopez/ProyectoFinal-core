@@ -48,6 +48,25 @@ public class ColaDeTurnos {
 
     }
 
+    public boolean deleteById(int id) {
+        if (front == null) return false;
+
+        if (front.getTurno().getId() == id) {
+            front = front.getNext();
+            return true;
+        }
+
+        ColaNode actual = front;
+        while (actual.getNext() != null) {
+            if (actual.getNext().getTurno().getId() == id) {
+                actual.setNext(actual.getNext().getNext());
+                return true;
+            }
+            actual = actual.getNext();
+        }
+        return false;
+    }
+
     public boolean colaVacia() {
         return front == null;
     }

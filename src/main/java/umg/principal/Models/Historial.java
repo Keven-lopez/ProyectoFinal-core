@@ -8,8 +8,8 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 public class Historial {
-    private long id;
-    private long turnoId;
+    private int id;
+    private int turnoId;
     private java.time.LocalDateTime fechaFinalizacion;
     private String observaciones;
 

@@ -1,20 +1,18 @@
 package umg.principal.Models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 public class Turno {
-    private Long id;
+    private int id;
     private LocalDateTime fechaCreacion;
     private String estado;
-    private Long clienteId;
-    private Long servicioId;
+    private int clienteId;
+    private int servicioId;
 }

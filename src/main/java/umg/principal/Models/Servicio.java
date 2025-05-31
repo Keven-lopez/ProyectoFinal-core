@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 public class Servicio implements Comparable<Servicio>{
-        private long id;
+        private int id;
         private String nombre;
         private String descripcion;
 
